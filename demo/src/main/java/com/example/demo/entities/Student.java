@@ -20,7 +20,7 @@ public class Student {
 	@OneToOne(fetch = FetchType.LAZY)
 	private Passport passport;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "student")
 	private List<Course> courses ;
 	
 	public Passport getPassport() {
